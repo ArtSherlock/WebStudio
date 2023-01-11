@@ -2,6 +2,7 @@
 <html lang="ua">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebStudio</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -13,9 +14,9 @@
     <nav>
       <a class="logo" href="index.html"><span class="logo-web">Web</span>Studio</a>
       <ul class="site-nav">
-        <li><a class="site-nav-item" href="">Студія</a></li>
-        <li><a class="site-nav-item" href="">Портфоліо</a></li>
-        <li><a class="site-nav-item" href="">Контакти</a></li>
+        <li><a class="site-nav-item" href="#">Студія</a></li>
+        <li><a class="site-nav-item" href="portfolio.html">Портфоліо</a></li>
+        <li><a class="site-nav-item" href="#">Контакти</a></li>
       </ul>
     </nav>
     <ul class="get-in-touch">
@@ -28,25 +29,25 @@
     <section class="promo">
       <h1 class="visually-hidden">Студія вебдизайну WebStudio</h1>
       <p class="credo">Ефективні рішення для вашого бізнесу</p>
-      <button type="button">Замовити послугу</button>
+      <button type="button" class="order-btn">Замовити послугу</button>
     </section>
 
     <section class="what-we-do">
        <ul class="features">
-        <li>
-          <h3>Увага до деталей</h3>
+        <li class="features-item">
+          <h3 class="features-header">Увага до деталей</h3>
           <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
         </li>
-        <li>
-          <h3>Пунктуальність</h3>
+        <li class="features-item">
+          <h3 class="features-header">Пунктуальність</h3>
           <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
         </li>
-        <li>
-          <h3>Планування</h3>
+        <li class="features-item">
+          <h3 class="features-header">Планування</h3>
           <p>Так само консультація з широким активом значною мірою зумовлює.</p>
         </li>
-        <li>
-          <h3>Сучасні технології</h3>
+        <li class="features-item">
+          <h3 class="features-header">Сучасні технології</h3>
           <p>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
         </li>
        </ul>
@@ -62,24 +63,24 @@
     <section class="our-team">
       <h2>Наша команда</h2>
       <ul>
-        <li>
-          <img src="img/team-1.jpg" alt="дизайнер">
-          <p class="name">Ігор Дем'яненко</p>
+        <li class="our-team-item">
+          <img  src="img/team-1.jpg" alt="дизайнер">
+          <h3 class="name">Ігор Дем'яненко</h3>
           <p class="occupation">Product Designer</p>
         </li>
-        <li>
-          <img src="img/team-2.jpg" alt="розробник">
-          <p class="name">Ольга Рєпіна</p>
+        <li class="our-team-item">
+          <img  src="img/team-2.jpg" alt="розробник">
+          <h3 class="name">Ольга Рєпіна</h3>
           <p class="occupation">Frontend Developer</p>
         </li>
-        <li>
-          <img src="img/team-3.jpg" alt="маркетолог">
-          <p class="name">Микола Тарасов</p>
+        <li class="our-team-item">
+          <img  src="img/team-3.jpg" alt="маркетолог">
+          <h3 class="name">Микола Тарасов</h3>
           <p class="occupation">Marketing</p>
         </li>
-        <li>
-          <img src="img/team-4.jpg" alt="дизайнер">
-          <p class="name">Михайло Єрмаков</p>
+        <li class="our-team-item">
+          <img  src="img/team-4.jpg" alt="дизайнер">
+          <h3 class="name">Михайло Єрмаков</h3>
           <p class="occupation">UI Designer</p>
         </li>
       </ul>
@@ -88,10 +89,10 @@
 
   <footer>
     <a class="logo" href="index.html"><span class="logo-web">Web</span>Studio</a>
-    <address>
-      м. Київ, пр-т Лесі Українки, 26<br>
-      info@devstudio.com<br>
-      +38 096 111 11 11
+    <address class="address">
+      <span class="address-street">м. Київ, пр-т Лесі Українки, 26</span><br>
+      <a class="get-in-touch-item" href="mailto:info@devstudio.com">info@devstudio.com</a><br>
+      <a class="get-in-touch-item" href="tel:+380961111111">+38 096 111 11 11</a>
     </address>
   </footer>
 </body>

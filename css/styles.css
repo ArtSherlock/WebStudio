@@ -1,13 +1,20 @@
 :root {
-  --references-color: #2196F3;
+  --reference-color: #2196F3;
+  --main-text-color: #757575;
+  --header-color: #212121;
+  --button-color: #212121;
 }
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font: 400 14px/24px Roboto, sans-serif;
+  font: 400 14px/1.71 Roboto, sans-serif;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--main-text-color);
 }
 
 img {
@@ -15,8 +22,27 @@ img {
   height: auto;
 }
 
-ul {list-style: none;}
-a {text-decoration: none;}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2,
+h3
+{
+  color: var(--header-color);  
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+}
 
 .visually-hidden {
   position: absolute;
@@ -35,26 +61,148 @@ a {text-decoration: none;}
 /* ======================= HEADER =================== */
 
 .logo {
-  font: 700 26px/31px Raleway, sans-serif;
+  font: 700 26px/1.48 Raleway, sans-serif;
   color: #000;
 }
 
-.logo-web {color: #2196F3;}
+.logo-web {
+  color: var(--reference-color);
+}
+
+.site-nav-item,
+.get-in-touch-item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav-item {
+  color: #212121;
+}
+
+.get-in-touch-item {
+  color: inherit;
+}
+
+.site-nav-item:hover,
+.get-in-touch-item:hover {
+  color: var(--reference-color);
+}
 
 
 /* ======================= PROMO ===================== */
 
-.site-nav-item,
-.get-in-touch-item {
-  font: 500 14px/16px Roboto, sans-serif;
-  letter-spacing: 0.02em;
-  color: #212121;
+.promo {
+  
+  color: #fff;
+  background-color: #2e2e2e; /*temporary*/
 }
 
-.get-in-touch-item {color: #757575;}
-
-.site-nav-item:hover,
-.get-in-touch-item:hover {
-  color: var(--references-color);
+.credo {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
 }
 
+.order-btn {
+  padding: 10px 32px;
+
+  background-color: var(--reference-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background-color: #188CE8;
+}
+
+
+/* ======================== WHAT-WE-DO ========================== */
+
+.features-item {
+  width: 270px;
+}
+
+.features-header {
+  text-transform: uppercase;
+}
+
+
+/* ======================== OUR-TEAM ============================ */
+
+.our-team {
+  background-color: #F5F4FA;
+}
+
+.our-team-item {
+  width: 270px;
+  height: 368px;
+}
+
+.our-team-item .occupation {
+  text-align: center;
+}
+
+
+/* ========================= FOOTER =================================== */
+
+footer {
+  background-color: #2F303A;
+}
+
+.address {
+  font-style: normal;
+  color: #fff;
+}
+
+.address-street {  
+  color: #fff;
+}
+
+
+
+/* ====================== INNER PAGES ============================= */
+
+/* ======================= PORTFOLIO =============================== */
+/* ===================== PORTFOLIO-FILTER ========================== */
+
+.portfolio-toggler {
+  width: 125px;
+  height: 38px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--button-color);
+
+  background-color: #F5F4FA;
+  border: none;
+  border-radius: 4px;
+}
+
+.portfolio-toggler:hover {
+  background-color: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ======================= PORTFOLIO-LIST ========================= */
+
+.portfolio-list-item {
+  width: 370px;
+  height: 404px;
+}
+
+.portfolio-list-item .description {
+  text-align: center;
+}
