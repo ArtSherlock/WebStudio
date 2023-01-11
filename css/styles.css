@@ -1,8 +1,8 @@
 :root {
-  --reference-color: #2196F3;
+  --brand-color: #2196F3;
   --main-text-color: #757575;
-  --header-color: #212121;
-  --button-color: #212121;
+  --second-text-color: #212121;
+  --button-text-color: #fff;    
 }
 
 * {
@@ -28,13 +28,12 @@ ul {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 h2,
 h3
 {
-  color: var(--header-color);  
+  color: var(--second-text-color);  
   text-align: center;
 }
 
@@ -57,6 +56,27 @@ h2 {
   overflow: hidden;
 }
 
+.btn {
+  width: 200px;
+  min-height: 50px;
+
+  background: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--button-text-color);
+
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
 
 /* ======================= HEADER =================== */
 
@@ -66,7 +86,7 @@ h2 {
 }
 
 .logo-web {
-  color: var(--reference-color);
+  color: var(--brand-color);
 }
 
 .site-nav-item,
@@ -78,10 +98,10 @@ h2 {
 }
 
 .site-nav-item {
-  color: #212121;
+  color: var(--second-text-color);
 }
 
-.address .get-in-touch-item {
+.address > .get-in-touch-item {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -91,15 +111,13 @@ h2 {
 
 .site-nav-item:hover,
 .get-in-touch-item:hover {
-  color: var(--reference-color);
+  color: var(--brand-color);
 }
 
 
 /* ======================= PROMO ===================== */
 
 .promo {
-  
-  color: #fff;
   background-color: #2e2e2e; /*temporary*/
 }
 
@@ -107,22 +125,11 @@ h2 {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  color: #fff;
 }
 
 .order-btn {
-  padding: 10px 32px;
-
-  background-color: var(--reference-color);
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  color: inherit;
-
-  cursor: pointer;
+  padding: 10px 24px;
 }
 
 .order-btn:hover {
@@ -183,7 +190,7 @@ footer {
 /* ======================= PORTFOLIO =============================== */
 /* ===================== PORTFOLIO-FILTER ========================== */
 
-.portfolio-toggler {
+.portfolio-toggle {
   width: 125px;
   height: 38px;
 
@@ -191,16 +198,20 @@ footer {
   font-size: 16px;
   line-height: 26px;
   text-align: center;
-  color: var(--button-color);
+  color: var(--second-text-color);
 
   background-color: #F5F4FA;
   border: none;
   border-radius: 4px;
 }
 
-.portfolio-toggler:hover {
+.portfolio-toggle:hover {
   background-color: #2196F3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+              0px 1px 2px rgba(0, 0, 0, 0.08),
+              0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: var(--button-text-color);
 }
 
 
@@ -211,6 +222,6 @@ footer {
   height: 404px;
 }
 
-.portfolio-list-item .description {
-  text-align: center;
+.portfolio-link {
+  color: inherit;
 }
