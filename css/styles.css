@@ -1,8 +1,9 @@
 :root {
   --brand-color: #2196F3;
   --main-text-color: #757575;
-  --second-text-color: #212121;
+  --secondary-text-color: #212121;
   --button-text-color: #fff;    
+  --secondary-bg-color: #F5F4FA;
 }
 
 body {
@@ -49,7 +50,7 @@ img {
 h2,
 h3
 {
-  color: var(--second-text-color);  
+  color: var(--secondary-text-color);  
 }
 
 h2 {
@@ -123,7 +124,7 @@ h2 {
 }
 
 .site-nav-link {
-  color: var(--second-text-color);
+  color: var(--secondary-text-color);
 }
 
 .get-in-touch {
@@ -132,8 +133,8 @@ h2 {
   margin-left: auto;
 }
 
-.get-in-touch-item:first-child {
-  margin-right: 50px;
+.get-in-touch-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .site-nav-link,
@@ -150,11 +151,24 @@ h2 {
 
 .get-in-touch-link {
   color: inherit;
+
+  display: flex;
+  align-items: center; 
 }
 
 .site-nav-link:hover,
 .get-in-touch-link:hover {
   color: var(--brand-color);
+}
+
+.get-in-touch-icon {
+  fill: currentColor;
+  
+  margin-right: 10px;
+}
+
+.get-in-touch-link:hover .get-in-touch-icon {
+  fill: currentColor;
 }
 
 
@@ -164,7 +178,16 @@ h2 {
   min-height: 600px;
   padding: 200px 0;
 
-  background-color: #2e2e2e; /*temporary*/
+  background-image: linear-gradient(
+                   rgba(47, 48, 58, 0.4),
+                   rgba(47, 48, 58, 0.4)
+                   ),
+                   url("../img/main-bg.jpg");
+  /* background-color: #2e2e2e; */
+  background-size: 1600px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .credo {
@@ -207,6 +230,23 @@ h2 {
   flex-basis: calc((100% - 90px) / 4);
 }
 
+.do-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+  height: 120px;
+
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+}
+
+/* .features-icon {
+  width: 70px;
+  height: 70px;
+} */
+
 .features-header {
   text-transform: uppercase;
 }
@@ -228,7 +268,7 @@ h2 {
 
 .our-team {
   padding: 94px 0;
-  background-color: #F5F4FA;
+  background-color: var(--secondary-bg-color);
 }
 
 .our-team-title {
@@ -311,9 +351,9 @@ h2 {
   font-size: 16px;
   line-height: 26px;
   text-align: center;
-  color: var(--second-text-color);
+  color: var(--secondary-text-color);
 
-  background-color: #F5F4FA;
+  background-color: var(--secondary-bg-color);
   border: none;
   border-radius: 4px;
 }
