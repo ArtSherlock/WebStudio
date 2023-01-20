@@ -281,6 +281,39 @@ h2 {
   justify-content: space-between;
 }
 
+.occupation {
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: inherit;
+}
+
+.social-link:hover {
+  background-color: var(--brand-color);
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
+.social-link:hover .social-icon {
+  fill: #fff;
+}
+
 .our-team-item {
   flex-basis: calc((100% - 90px) / 4);
 
@@ -292,12 +325,59 @@ h2 {
 }
 
 .our-team-wrapper {
-  padding: 30px 20px;
+  padding: 30px 32px;
 
   background-color: #fff;
   text-align: center;
 }
 
+
+/* =========================== REGULAR-CUSTOMERS ===================== */
+
+.regular-customers {
+  min-height: 372px;
+  padding: 94px 0;
+}
+
+.regular-customers-title {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer-item {
+  flex-basis: calc((100% - 150px) / 6);
+}
+
+.customer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 92px;
+
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+
+  color: inherit;
+}
+
+.customer-link:hover {
+  border-color: var(--brand-color);
+}
+
+.customer-icon {
+  fill: currentColor;
+}
+
+.customer-link:hover .customer-icon {
+  fill: var(--brand-color);
+}
 
 /* ========================= FOOTER =================================== */
 
@@ -306,6 +386,10 @@ h2 {
   min-height: 252px;
 
   background-color: #2F303A;
+}
+
+.footer-container {
+  display: flex;
 }
 
 .address {
@@ -324,6 +408,36 @@ h2 {
 
 .address-item {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-social-column {
+  margin-top: 12px;
+}
+
+.footer-first-column {
+  margin-right: 70px;
+}
+
+.footer-social-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon {
+  fill: #fff;
 }
 
 
