@@ -484,9 +484,20 @@ h2 {
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 
+  background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+.email-subscription-field::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.email-subscription-field:focus {
+  background-color: #fff;
+  color: #212121;
+  outline: 2px solid var(--brand-color);
 }
 
 .subscription-form {
@@ -585,17 +596,136 @@ h2 {
   fill: var(--brand-color);
 }
 
+/* order form */
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-form-title {
+  font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
+  color: var(--secondary-text-color);
   text-align: center;
 }
 
-/* .backdrop.is-hidden {
+.contact-form-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  margin-bottom: 10px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: fill 250ms var(--primary-transition);
+}
+
+.contact-form-field:focus {
+  outline: none;
+  border: 1px solid var(--brand-color);
+}
+
+.contact-form-field:focus + .order-form-icon {
+  fill: var(--brand-color);
+}
+
+.order-field-wrapper {
+  position: relative;
+}
+
+.order-form-icon {
+  position: absolute;
+  top: 11px;  
+  left: 12px;
+  transition: fill 250ms var(--primary-transition);
+
+  fill: #212121;
+}
+
+.order-form-message {
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+}
+
+.order-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.order-form-message {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.form-policy {
+  margin-left: 14px;
+  margin-bottom: 30px;
+}
+
+.policy-checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.policy-checkbox-label::before {
+  content: "";
+  display: inline-block;
+
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.form-policy-checkbox:focus + .policy-checkbox-label::before {
+  outline: 2px solid var(--brand-color);
+}
+
+.form-policy-checkbox:checked + .policy-checkbox-label::before {
+  background: var(--brand-color) url(../img/checked.svg) no-repeat center;
+  border: none;
+}
+
+.policy-link {
+  color: var(--brand-color);
+}
+
+.submit-order-form {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #fff;
+
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms var(--primary-transition);
+  }
+
+  .submit-order-form:hover,
+  .submit-order-form:focus {
+    background-color: #188CE8;
+  }
+
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-} */
+}
 
 
 /* ======================= INNER PAGES ============================= */

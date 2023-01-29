@@ -383,9 +383,9 @@
       </div>
 
       <div class="footer-subscription-column">
-        <h3 class="footer-title">приєднуйтесь</h3>
+        <h3 class="footer-title">Підпишіться на розсилку</h3>
         <form class="subscription-form">
-          <input type="email" class="email-subscription-field" name="email-subscription-field" placeholder="E-mail">
+          <input type="email" class="email-subscription-field" name="email-subscription-field" placeholder="E-mail" required>
           <button type="submit" class="subscription-btn">
             Підписатися
             <svg class="send-form-icon" width="24" height="24">
@@ -400,21 +400,46 @@
 <!-- MODAL WINDOW -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <form class="order-form">
-        <h2 class="modal-form-title">Залиште свої дані, ми вам передзвонимо</h2>
+      <form class="order-form" method="POST">
+        <p class="modal-form-title">Залиште свої дані, ми вам передзвонимо</p>
 
-        <label for="customer-name">Ім'я</label>
-        <input type="text" name="customer-name" id="customer-name">
+        <label for="customer-name"><span class="order-label">Ім'я</span></label>
+        <div class="order-field-wrapper">
+          <input type="text" name="customer-name" class="contact-form-field" id="customer-name" minlength="2" required>
+          <svg class="order-form-icon" width="18" height="18">
+            <use href="img/sprite.svg#name-form"></use>
+          </svg>
+        </div>
 
-        <label for="customer-tel">Телефон</label>
-        <input type="tel" name="customer-tel" id="customer-tel">
+        <label for="customer-tel"><span class="order-laberl">Телефон</span></label>
+        <div class="order-field-wrapper">
+          <input type="tel" name="customer-tel" class="contact-form-field" id="customer-tel" required>
+          <svg class="order-form-icon" width="18" height="18">
+            <use href="img/sprite.svg#phone-form"></use>
+          </svg>
+        </div>
 
-        <label for="customer-email">Пошта</label>
-        <input type="email" name="customer-email" id="customer-email">
+        <label for="customer-email"><span class="order-label">Пошта</span></label>
+        <div class="order-field-wrapper">
+          <input type="email" name="customer-email" class="contact-form-field" id="customer-email" required>
+          <svg class="order-form-icon" width="18" height="18">
+            <use href="img/sprite.svg#mail-form"></use>
+          </svg>
+        </div>
 
-        <label for="customer-comment">Коментар</label>
-        <textarea name="customer-comment" id="customer-comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
-      </form>
+        <label for="customer-comment"><span class="order-label">Коментар</span></label>
+        <textarea name="customer-comment" class="contact-form-field order-form-message" id="customer-comment" placeholder="Введіть текст"></textarea>
+        
+        <p class="form-policy">
+          <input type="checkbox" name="policy-check" id="policy-check" class="form-policy-checkbox visually-hidden" value="policy-accept" required>
+          <label for="policy-check" class="policy-checkbox-label">
+            Погоджуюся з розсилкою та приймаю&nbsp;
+            <a href="" class="policy-link">Умови договору</a>
+          </label>          
+        </p>        
+
+        <button type="submit" class="submit-order-form">Відправити</button>
+        </form>
 
       <button type="button" class="modal-close-btn" data-modal-close>
         <svg class="modal-close-icon" width="18" height="18">
