@@ -1,0 +1,43 @@
+.what-we-do {
+  padding: 94px 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 94px;  
+}
+
+.features-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.do-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+  height: 120px;
+
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+}
+
+.features-header {
+  text-transform: uppercase;
+}
+
+.what-we-do-header {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.what-we-do-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

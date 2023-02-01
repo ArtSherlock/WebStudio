@@ -104,7 +104,7 @@ dist
 .tern-port
 
 # standart
-.vscode
+# .vscode
 .idea
 .DS_Store
 node_modules
