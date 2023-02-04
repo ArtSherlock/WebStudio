@@ -1,18 +1,18 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-  
-    width: 100vw;
-    height: 100vh;
-  
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 500ms var(--primary-transition),
-                visibility 500ms var(--primary-transition);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
 
-  .backdrop.is-hidden {
+  width: 100vw;
+  height: 100vh;
+  
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 500ms var(--primary-transition),
+              visibility 500ms var(--primary-transition);
+
+  &.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
   }
+}

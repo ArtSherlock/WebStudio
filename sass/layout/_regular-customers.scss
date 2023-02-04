@@ -1,46 +1,46 @@
 .regular-customers {
-    min-height: 372px;
-    padding: 94px 0;
-  }
-  
-  .regular-customers-title {
-    margin-bottom: 50px;
-  
-    text-align: center;
-  }
-  
-  .customers-list {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .customer-item {
-    flex-basis: calc((100% - 150px) / 6);
-  }
-  
-  .customer-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    height: 92px;
-  
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-  
-    color: inherit;
-    transition: border-color 250ms var(--primary-transition);
-  }
-  
-  .customer-link:hover {
+  min-height: 372px;
+  padding: 94px 0;
+}
+
+.regular-customers-title {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer-item {
+  flex-basis: calc((100% - 150px) / 6);
+}
+
+.customer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 92px;
+
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+
+  color: inherit;
+  transition: border-color 250ms var(--primary-transition);
+
+  &:hover {
     border-color: var(--brand-color);
   }
-  
-  .customer-icon {
-    fill: currentColor;
-    transition: fill 250ms var(--primary-transition);
-  }
-  
-  .customer-link:hover .customer-icon {
+}
+
+.customer-icon {
+  fill: currentColor;
+  transition: fill 250ms var(--primary-transition);
+
+  .customer-link:hover & {
     fill: var(--brand-color);
   }
+}
