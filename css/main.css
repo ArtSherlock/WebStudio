@@ -367,10 +367,112 @@ h2 {
   min-height: 60px;
 }
 
-.mobile-menu-btn {
+.mobile-menu-btn,
+.mobile-close-btn {
   background-color: transparent;
   border: none;
   padding: 0;
+  line-height: 0;
+}
+
+.header {
+  position: relative;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.mobile-menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 450px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+.mobile-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.mobile-menu-nav-item:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.mobile-menu-nav-link {
+  font: 500 40px/1.18 Roboto, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.current-mobile-link {
+  color: var(--brand-color);
+}
+
+.mobile-contact-details {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.mobile-contact-item:first-child {
+  margin-bottom: 32px;
+}
+
+.mobile-contact-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
+}
+
+.mobile-contact-email {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.mobile-menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.mobile-social-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--brand-color);
+}
+.mobile-social-link::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 .promo {
