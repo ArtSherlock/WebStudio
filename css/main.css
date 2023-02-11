@@ -66,11 +66,15 @@ h2 {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
   padding: 0 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
 .btn {
   width: 200px;
   min-height: 50px;
@@ -112,7 +116,6 @@ h2 {
   -webkit-transition: background-color 250ms var(--primary-transition);
   transition: background-color 250ms var(--primary-transition);
 }
-
 .social-link:hover {
   background-color: var(--brand-color);
 }
@@ -122,7 +125,6 @@ h2 {
   -webkit-transition: fill 250ms var(--primary-transition);
   transition: fill 250ms var(--primary-transition);
 }
-
 .social-link:hover .social-icon {
   fill: #fff;
 }
@@ -152,7 +154,6 @@ h2 {
   -webkit-transition: opacity 500ms var(--primary-transition), visibility 500ms var(--primary-transition);
   transition: opacity 500ms var(--primary-transition), visibility 500ms var(--primary-transition);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -200,7 +201,6 @@ h2 {
   -webkit-transition: fill 250ms var(--primary-transition);
   transition: fill 250ms var(--primary-transition);
 }
-
 .modal-close-icon:hover {
   fill: var(--brand-color);
 }
@@ -233,12 +233,10 @@ h2 {
   -webkit-transition: fill 250ms var(--primary-transition);
   transition: fill 250ms var(--primary-transition);
 }
-
 .contact-form-field:focus {
   outline: none;
   border: 1px solid var(--brand-color);
 }
-
 .contact-form-field:focus + .order-form-icon {
   fill: var(--brand-color);
 }
@@ -287,7 +285,6 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .policy-checkbox-label::before {
   content: "";
   display: inline-block;
@@ -298,11 +295,9 @@ h2 {
   border-radius: 2px;
   cursor: pointer;
 }
-
 .form-policy-checkbox:focus + .policy-checkbox-label::before {
   outline: 2px solid var(--brand-color);
 }
-
 .form-policy-checkbox:checked + .policy-checkbox-label::before {
   background: var(--brand-color) url(../img/checked.svg) no-repeat center;
   border: none;
@@ -330,112 +325,29 @@ h2 {
   -webkit-transition: background-color 250ms var(--primary-transition);
   transition: background-color 250ms var(--primary-transition);
 }
-
-.submit-order-form:hover,
-.submit-order-form:focus {
+.submit-order-form:hover, .submit-order-form:focus {
   background-color: #188CE8;
 }
 
-.header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 80px;
-}
-
-.header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.site-nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav-link {
-  position: relative;
-  color: var(--secondary-text-color);
-}
-
-.current {
-  color: var(--brand-color);
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  bottom: -32px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--brand-color);
+  display: none;
 }
 
 .get-in-touch {
+  display: none;
+}
+
+.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: auto;
-}
-
-.get-in-touch-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.site-nav-link,
-.get-in-touch-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  -webkit-transition: color 250ms var(--primary-transition);
-  transition: color 250ms var(--primary-transition);
-}
-
-.address > .get-in-touch-link {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.get-in-touch-link {
-  color: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.site-nav-link:hover,
-.get-in-touch-link:hover {
-  color: var(--brand-color);
-}
-
-.get-in-touch-icon {
-  fill: currentColor;
-  margin-right: 10px;
-}
-
-.get-in-touch-link:hover .get-in-touch-icon {
-  fill: currentColor;
+  min-height: 60px;
 }
 
 .promo {
@@ -443,7 +355,6 @@ h2 {
   padding: 200px 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/main-bg.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main-bg.jpg");
-  /* background-color: #2e2e2e; */
   background-size: 1600px 600px;
   background-repeat: no-repeat;
   background-position: center;
@@ -466,7 +377,6 @@ h2 {
   -webkit-transition: background-color 250ms var(--primary-transition);
   transition: background-color 250ms var(--primary-transition);
 }
-
 .modal-btn:hover {
   background-color: #188CE8;
 }
@@ -607,7 +517,6 @@ h2 {
   -webkit-transition: border-color 250ms var(--primary-transition);
   transition: border-color 250ms var(--primary-transition);
 }
-
 .customer-link:hover {
   border-color: var(--brand-color);
 }
@@ -617,7 +526,6 @@ h2 {
   -webkit-transition: fill 250ms var(--primary-transition);
   transition: fill 250ms var(--primary-transition);
 }
-
 .customer-link:hover .customer-icon {
   fill: var(--brand-color);
 }
@@ -695,27 +603,21 @@ h2 {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-
 .email-subscription-field::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .email-subscription-field::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .email-subscription-field:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .email-subscription-field::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .email-subscription-field::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .email-subscription-field:focus {
   background-color: #fff;
   color: #212121;
