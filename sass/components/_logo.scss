@@ -1,8 +1,14 @@
 .logo {
   margin-right: 93px;
 
-  font: 700 26px/1.48 Raleway, sans-serif;
+  font: 700 24px/1.17 Raleway, sans-serif;
+  letter-spacing: 0.03em;
   color: #000;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.48;
+  }
 }
 
 .logo-web {
