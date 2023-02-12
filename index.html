@@ -21,7 +21,7 @@
           <li class="site-nav-item"><a class="site-nav-link link" href="#">Контакти</a></li>
         </ul>
       </nav>
-      <button type="button" class="mobile-menu-btn">
+      <button type="button" class="mobile-menu-btn" data-menu-open>
         <svg class="mobile-menu-icon" width="40" height="40">
           <use href="img/sprite.svg#menu-mobile"></use>
         </svg>
@@ -47,9 +47,9 @@
       </ul>
     </div>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" data-menu>
       <div class="mobile-menu-container">
-        <button class="mobile-close-btn">
+        <button class="mobile-close-btn" data-menu-close>
           <svg class="mobile-close-icon" width="40" height="40">
             <use href="img/sprite.svg#mobile-close-icon"></use>
           </svg>
@@ -493,6 +493,7 @@
     </div>
   </div>
 
-  <script src="js/modal.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/modal.js"></script>  
 </body>
 </html>
