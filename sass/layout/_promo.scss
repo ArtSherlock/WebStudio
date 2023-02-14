@@ -1,13 +1,29 @@
 .promo {
-  min-height: 600px;
-  padding: 200px 0;
+  min-height: 400px;
+  padding: 118px 0;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
                                     rgba(47, 48, 58, 0.4)),
-                                    url("../img/main-bg.jpg");
-  background-size: 1600px 600px;
+                                    url("../img/main-bg-mobile.jpg");
+  background-size: 480px 400px;
   background-repeat: no-repeat;
   background-position: center;
+      
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                                      rgba(47, 48, 58, 0.4)),
+                                      url("../img/main-bg-tablet.jpg");
+    background-size: 768px 400px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                                      rgba(47, 48, 58, 0.4)),
+                                      url("../img/main-bg.jpg");
+    background-size: 1600px 600px;
+    // min-height: 600px;
+    padding: 200px 0;
+  }
 }
 
 .credo {
@@ -16,9 +32,15 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
   color: #fff;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .modal-btn {
@@ -26,9 +48,68 @@
   margin: 0 auto;
   padding: 10px 24px;
 
-  transition: background-color 250ms var(--primary-transition);
-
-  &:hover {
-    background-color: #188CE8;
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      background-color: #188CE8;
+    }
   }
 }
+
+// PIXEL RATIO BACKGROUNDS
+@media (min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+
+  .promo {  
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                                      rgba(47, 48, 58, 0.4)),
+                                    url("../img/main-bg-mobile@2x.jpg");
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                                      rgba(47, 48, 58, 0.4)),
+                                      url("../img/main-bg-tablet@2x.jpg");
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                                      rgba(47, 48, 58, 0.4)),
+                                      url("../img/main-bg@2x.jpg");
+    }
+  }
+}
+
+// .promo {
+//   min-height: 600px;
+//   padding: 200px 0;
+
+//   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+//                                     rgba(47, 48, 58, 0.4)),
+//                                     url("../img/main-bg.jpg");
+//   background-size: 1600px 600px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+// .credo {
+//   margin-bottom: 30px;
+
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-weight: 900;
+//   font-size: 44px;
+//   line-height: 1.36;
+//   color: #fff;
+// }
+
+// .modal-btn {
+//   display: block;
+//   margin: 0 auto;
+//   padding: 10px 24px;
+
+//   transition: background-color 250ms var(--primary-transition);
+
+//   &:hover {
+//     background-color: #188CE8;
+//   }
+// }
