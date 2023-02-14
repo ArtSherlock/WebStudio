@@ -21,7 +21,6 @@
                                       rgba(47, 48, 58, 0.4)),
                                       url("../img/main-bg.jpg");
     background-size: 1600px 600px;
-    // min-height: 600px;
     padding: 200px 0;
   }
 }
@@ -49,7 +48,8 @@
   padding: 10px 24px;
 
   @media screen and (min-width: 1200px) {
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: #188CE8;
     }
   }

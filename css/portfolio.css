@@ -123,20 +123,28 @@ h2 {
   height: 44px;
   border-radius: 50%;
   color: inherit;
-  -webkit-transition: background-color 250ms var(--primary-transition);
-  transition: background-color 250ms var(--primary-transition);
 }
-.social-link:hover {
-  background-color: var(--brand-color);
+@media screen and (min-width: 1200px) {
+  .social-link {
+    -webkit-transition: background-color 250ms var(--primary-transition);
+    transition: background-color 250ms var(--primary-transition);
+  }
+  .social-link:hover, .social-link:focus {
+    background-color: var(--brand-color);
+  }
 }
 
 .social-icon {
   fill: currentColor;
-  -webkit-transition: fill 250ms var(--primary-transition);
-  transition: fill 250ms var(--primary-transition);
 }
-.social-link:hover .social-icon {
-  fill: #fff;
+@media screen and (min-width: 1200px) {
+  .social-icon {
+    -webkit-transition: fill 250ms var(--primary-transition);
+    transition: fill 250ms var(--primary-transition);
+  }
+  .social-link:hover .social-icon, .social-link:focus .social-icon {
+    fill: #fff;
+  }
 }
 
 .logo {
@@ -207,6 +215,7 @@ h2 {
 
 .header {
   position: relative;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -260,7 +269,7 @@ h2 {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
-  .site-nav-link:hover {
+  .site-nav-link:hover, .site-nav-link:focus {
     color: var(--brand-color);
   }
 }
@@ -297,7 +306,7 @@ h2 {
     color: inherit;
   }
   .get-in-touch-icon {
-    fill: inherit;
+    fill: currentColor;
     margin-right: 8px;
   }
 }
@@ -310,16 +319,17 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
   }
-  .get-in-touch-link:hover {
+  .get-in-touch-link:hover, .get-in-touch-link:focus {
     color: var(--brand-color);
   }
   .get-in-touch-item:not(:last-child) {
     margin-right: 30px;
+    margin-bottom: 0;
   }
   .get-in-touch-icon {
     margin-right: 10px;
   }
-  .get-in-touch-link:hover .get-in-touch-icon {
+  .get-in-touch-link:hover .get-in-touch-icon, .get-in-touch-link:focus .get-in-touch-icon {
     fill: currentColor;
   }
 }

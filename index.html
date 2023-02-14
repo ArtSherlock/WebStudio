@@ -98,9 +98,9 @@
 
 <!-- WHAT WE DO -->
 
-    <!-- <section class="what-we-do">
-       <div class="container">
-         <ul class="features list">
+    <section class="what-we-do">
+      <div class="container">
+        <ul class="features list">
           <li class="features-item">
             <div class="do-wrapper">
               <svg class="features-icon" width="70" height="70">
@@ -108,7 +108,7 @@
               </svg>
             </div>
             <h3 class="features-header">Увага до деталей</h3>
-            <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+            <p class="features-descr">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
           </li>
 
           <li class="features-item">
@@ -118,7 +118,7 @@
               </svg>
             </div>
             <h3 class="features-header">Пунктуальність</h3>
-            <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+            <p class="features-descr">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
           </li>
 
           <li class="features-item">
@@ -128,7 +128,7 @@
               </svg>
             </div>
             <h3 class="features-header">Планування</h3>
-            <p>Так само консультація з широким активом значною мірою зумовлює.</p>
+            <p class="features-descr">Так само консультація з широким активом значною мірою зумовлює.</p>
           </li>
 
           <li class="features-item">
@@ -138,27 +138,35 @@
               </svg>
             </div>
             <h3 class="features-header">Сучасні технології</h3>
-            <p>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+            <p class="features-descr">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
           </li>
-         </ul>
-         
-        <h2 class="what-we-do-header">Чим ми займаємося</h2>
-        <ul class="what-we-do-list list">
-          <li><a href="" class="link"><img src="img/do-1.jpg" width="270" height="294" alt="верстаємо макти"></a></li>
-          <li><a href="" class="link"><img src="img/do-2.jpg" width="270" height="294" alt="робимо адаптив"></a></li>
-          <li><a href="" class="link"><img src="img/do-3.jpg" width="270" height="294" alt="створюємо дизайн"></a></li>
         </ul>
-       </div>
-    </section> -->
+        
+        <div class="what-we-do-extra">
+          <h2 class="what-we-do-header">Чим ми займаємося</h2>
+          <ul class="what-we-do-list list">
+            <li><a href="" class="link"><img src="img/do-1.jpg" width="370" height="294" alt="верстаємо макти"></a></li>
+            <li><a href="" class="link"><img src="img/do-2.jpg" width="370" height="294" alt="робимо адаптив"></a></li>
+            <li><a href="" class="link"><img src="img/do-3.jpg" width="370" height="294" alt="створюємо дизайн"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
 <!-- OUR TEAM -->
 
-    <!-- <section class="our-team">
+    <section class="our-team">
       <div class="container">
         <h2 class="our-team-title">Наша команда</h2>
         <ul class="our-team-list list">
           <li class="our-team-item">
-            <img  src="img/team-1.jpg" wght="270" height="260" alt="дизайнер">
+            <picture>
+              <source srcset="img/team-1.jpg 1x, img/team-1@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="img/team-1-tablet.jpg 1x, img/team-1-tablet@2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="img/team-1-mobile.jpg 1x, img/team-1-mobile@2x.jpg 2x" media="(min-width: 480px)">
+              <img  src="img/team-1.jpg" wght="270" height="260" alt="дизайнер">
+            </picture>
+            
             <div class="our-team-wrapper">
               <h3 class="name">Ігор Дем'яненко</h3>
               <p class="occupation">Product Designer</p>
@@ -199,7 +207,13 @@
           </li>
 
           <li class="our-team-item">
-            <img  src="img/team-2.jpg" wght="270" height="260" alt="розробник">
+            <picture>
+              <source srcset="img/team-2.jpg 1x, img/team-2@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="img/team-2-tablet.jpg 1x, img/team-2-tablet@2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="img/team-2-mobile.jpg 1x, img/team-2-mobile@2x.jpg 2x" media="(min-width: 480px)">
+              <img  src="img/team-2.jpg" wght="270" height="260" alt="розробник">
+            </picture>
+            
             <div class="our-team-wrapper">
               <h3 class="name">Ольга Рєпіна</h3>
               <p class="occupation">Frontend Developer</p>
@@ -240,7 +254,13 @@
           </li>
 
           <li class="our-team-item">
-            <img  src="img/team-3.jpg" wght="270" height="260" alt="маркетолог">
+            <picture>
+              <source srcset="img/team-3.jpg 1x, img/team-3@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="img/team-3-tablet.jpg 1x, img/team-3-tablet@2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="img/team-3-mobile.jpg 1x, img/team-3-mobile@2x.jpg 2x" media="(min-width: 480px)">
+              <img  src="img/team-3.jpg" wght="270" height="260" alt="маркетолог">
+            </picture>
+            
             <div class="our-team-wrapper">
               <h3 class="name">Микола Тарасов</h3>
               <p class="occupation">Marketing</p>
@@ -281,7 +301,13 @@
           </li>
           
           <li class="our-team-item">
-            <img  src="img/team-4.jpg" wght="270" height="260" alt="дизайнер">
+            <picture>
+              <source srcset="img/team-4.jpg 1x, img/team-4@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="img/team-4-tablet.jpg 1x, img/team-4-tablet@2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="img/team-4-mobile.jpg 1x, img/team-4-mobile@2x.jpg 2x" media="(min-width: 480px)">
+              <img  src="img/team-4.jpg" wght="270" height="260" alt="дизайнер">
+            </picture>
+            
             <div class="our-team-wrapper">
               <h3 class="name">Михайло Єрмаков</h3>
               <p class="occupation">UI Designer</p>
@@ -322,7 +348,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
 <!-- REGULAR CUSTOMERS -->
 

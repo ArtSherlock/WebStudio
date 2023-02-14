@@ -12,19 +12,27 @@
   height: 44px;
 
   border-radius: 50%;
-  color: inherit;
-  transition: background-color 250ms var(--primary-transition);
+  color: inherit;  
 
-  &:hover {
-    background-color: var(--brand-color);
+  @media screen and (min-width: 1200px) {
+    transition: background-color 250ms var(--primary-transition);
+
+    &:hover,
+    &:focus {
+      background-color: var(--brand-color);
+    }
   }
 }
 
 .social-icon {
   fill: currentColor;
-  transition: fill 250ms var(--primary-transition);
 
-  .social-link:hover & {
-    fill: #fff;
+  @media screen and (min-width: 1200px) {
+    transition: fill 250ms var(--primary-transition);
+  
+    .social-link:hover &,
+    .social-link:focus & {
+      fill: #fff;
+    }
   }
 }

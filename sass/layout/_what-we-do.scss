@@ -1,17 +1,33 @@
 .what-we-do {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .features {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  margin-bottom: -30px;
 
-  margin-bottom: 94px;  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 94px;
+  }
 }
 
 .features-item {
-  flex-basis: calc((100% - 90px) / 4);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .do-wrapper {
@@ -24,16 +40,34 @@
 
   background-color: var(--secondary-bg-color);
   border-radius: 4px;
+
+
 }
 
 .features-header {
   text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.features-descr {
+  margin-bottom: 30px;
+}
+
+// EXTRA BLOCK FOR DESCTOP
+.what-we-do-extra {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .what-we-do-header {
-  margin-bottom: 50px;
-
   text-align: center;
+
+  margin-bottom: 50px;
 }
 
 .what-we-do-list {
@@ -41,3 +75,47 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+// .what-we-do {
+//   padding: 94px 0;
+// }
+
+// .features {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+
+//   margin-bottom: 94px;  
+// }
+
+// .features-item {
+//   flex-basis: calc((100% - 90px) / 4);
+// }
+
+// .do-wrapper {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   margin-bottom: 30px;
+//   height: 120px;
+
+//   background-color: var(--secondary-bg-color);
+//   border-radius: 4px;
+// }
+
+// .features-header {
+//   text-transform: uppercase;
+// }
+
+// .what-we-do-header {
+//   margin-bottom: 50px;
+
+//   text-align: center;
+// }
+
+// .what-we-do-list {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
