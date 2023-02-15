@@ -61,8 +61,14 @@ h3 {
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 36px;
+  }
 }
 
 .container {
@@ -169,9 +175,12 @@ h2 {
   color: var(--brand-color);
 }
 
-.footer .logo {
+.footer-logo {
   display: block;
-  margin-bottom: 15px;
+  color: #fff;
+  margin-right: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .header-inner {
@@ -528,8 +537,8 @@ h2 {
 }
 
 .footer {
-  padding: 60px 0;
-  min-height: 252px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2F303A;
 }
 
@@ -537,37 +546,102 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 76px;
+    padding-right: 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-and-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address-and-social {
+    width: 507px;
+  }
 }
 
 .address {
+  margin-bottom: 60px;
   font-style: normal;
+  text-align: center;
   color: #fff;
 }
 
-.address-street {
-  color: #fff;
+.address-street,
+.address-item:not(:last-child) {
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .address-item {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-social-column,
-.footer-subscription-column {
-  margin-top: 12px;
-}
-
-.footer-first-column {
-  margin-right: 70px;
-}
-
 .footer-title {
   margin-bottom: 20px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .footer-title {
+    margin-top: 12px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer-title-join {
+    margin-top: 5px;
+  }
+}
+
+.social-list {
+  margin-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .social-list {
+    margin-left: auto;
+  }
 }
 
 .footer-social-item:not(:last-child) {
@@ -582,15 +656,11 @@ h2 {
   fill: #fff;
 }
 
-.footer-subscription-column {
-  margin-left: auto;
-}
-
 .email-subscription-field {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
@@ -620,11 +690,11 @@ h2 {
   color: #212121;
   outline: 2px solid var(--brand-color);
 }
-
-.subscription-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .email-subscription-field {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscription-btn {
@@ -639,6 +709,7 @@ h2 {
           justify-content: center;
   width: 200px;
   min-height: 50px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -649,16 +720,40 @@ h2 {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--brand-color);
-  cursor: pointer;
-  -webkit-transition: background-color 250ms var(--primary-transition);
-  transition: background-color 250ms var(--primary-transition);
+}
+@media screen and (min-width: 1200px) {
+  .subscription-btn {
+    cursor: pointer;
+    -webkit-transition: background-color 250ms var(--primary-transition);
+    transition: background-color 250ms var(--primary-transition);
+  }
 }
 
-.subscription-btn:hover {
-  background-color: #188CE8;
+@media screen and (min-width: 1200px) {
+  .subscription-btn:hover,
+  .subscription-btn:focus {
+    background-color: #188CE8;
+  }
 }
 
 .send-form-icon {
   fill: #fff;
   margin-left: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-subscription-column {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }/*# sourceMappingURL=portfolio.css.map */
