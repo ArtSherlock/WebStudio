@@ -129,15 +129,11 @@ h2 {
   height: 44px;
   border-radius: 50%;
   color: inherit;
+  -webkit-transition: background-color 250ms var(--primary-transition);
+  transition: background-color 250ms var(--primary-transition);
 }
-@media screen and (min-width: 1200px) {
-  .social-link {
-    -webkit-transition: background-color 250ms var(--primary-transition);
-    transition: background-color 250ms var(--primary-transition);
-  }
-  .social-link:hover, .social-link:focus {
-    background-color: var(--brand-color);
-  }
+.social-link:hover, .social-link:focus {
+  background-color: var(--brand-color);
 }
 
 .social-icon {
@@ -182,28 +178,51 @@ h2 {
   margin-bottom: 20px;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    text-align: left;
+  }
+}
 
 .header-inner {
-  margin-bottom: 94px;
+  margin-bottom: 60px;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (min-width: 1200px) {
+  .header-inner {
+    margin-bottom: 94px;
+  }
 }
 
 .portfolio-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-filter {
+    margin-bottom: 35px;
+  }
 }
 
 .portfolio-toggle {
   display: block;
   padding: 6px 22px;
+  margin-bottom: 15px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.63;
   text-align: center;
   color: var(--secondary-text-color);
   background-color: var(--secondary-bg-color);
@@ -215,7 +234,7 @@ h2 {
 .portfolio-toggle:not(last-child) {
   margin-right: 8px;
 }
-.portfolio-toggle:hover {
+.portfolio-toggle:hover, .portfolio-toggle:focus {
   background-color: #2196F3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -224,7 +243,6 @@ h2 {
 
 .header {
   position: relative;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -598,6 +616,11 @@ h2 {
   font-style: normal;
   text-align: center;
   color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .address {
+    text-align: left;
+  }
 }
 
 .address-street,

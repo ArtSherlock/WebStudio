@@ -1,4 +1,8 @@
 .header-inner {
-  margin-bottom: 94px;
+  margin-bottom: 60px;
   border-bottom: 1px solid #ECECEC;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 94px;
+  }
 }
