@@ -244,6 +244,11 @@ h2 {
 .header {
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    overflow: hidden;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .site-nav,
@@ -488,20 +493,37 @@ h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 94px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list {
+    margin-bottom: 94px;
+  }
 }
 
 .portfolio-list-item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
   -webkit-transition: -webkit-box-shadow 250ms var(--primary-transition);
   transition: -webkit-box-shadow 250ms var(--primary-transition);
   transition: box-shadow 250ms var(--primary-transition);
   transition: box-shadow 250ms var(--primary-transition), -webkit-box-shadow 250ms var(--primary-transition);
 }
-.portfolio-list-item:hover {
+.portfolio-list-item:hover, .portfolio-list-item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list-item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio-img-thumb {
@@ -510,7 +532,6 @@ h2 {
 }
 
 .portfolio-item-desc {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -529,11 +550,12 @@ h2 {
   transition: transform 250ms var(--primary-transition);
   transition: transform 250ms var(--primary-transition), -webkit-transform 250ms var(--primary-transition);
 }
-.portfolio-link:hover .portfolio-item-desc {
+.portfolio-link:hover .portfolio-item-desc, .portfolio-link:focus .portfolio-item-desc {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
-.portfolio-list-item:hover .portfolio-item-desc {
+.portfolio-list-item:hover .portfolio-item-desc,
+.portfolio-item-desc .portfolio-list-item:focus {
   display: block;
 }
 
